@@ -13,7 +13,6 @@ module.exports = function (app) {
         ref: 'Persons'
     }],
     competencies: [{
-    
         type: mongooseClient.Schema.Types.ObjectId,
         ref: 'Competencies'
     }],

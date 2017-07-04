@@ -11,7 +11,10 @@ module.exports = function (app) {
     mobile: { type: String },
     email: { type: String },
    // role: { type: String}, 
-   // competencies: { type: array},
+    competencies: [{ 
+        type: mongooseClient.Schema.Types.ObjectId,
+        ref: 'competencies'
+    }],
     organizationID: { type: String, required: true }, 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
