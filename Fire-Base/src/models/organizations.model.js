@@ -12,6 +12,12 @@ module.exports = function (app) {
         type: mongooseClient.Schema.Types.ObjectId,
         ref: 'Persons'
     }],
+    competencies: [{
+    
+        type: mongooseClient.Schema.Types.ObjectId,
+        ref: 'Competencies'
+    }],
+
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });
