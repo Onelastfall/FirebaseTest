@@ -8,6 +8,10 @@ module.exports = function (app) {
   const organizations = new Schema({
     name: { type: String, required: true },
     phone: { type: String, required: true },
+    persons: [{ 
+        type: mongooseClient.Schema.Types.ObjectId,
+        ref: 'Persons'
+    }],
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });
